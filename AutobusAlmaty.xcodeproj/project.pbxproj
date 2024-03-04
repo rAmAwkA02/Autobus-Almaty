@@ -1,0 +1,532 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13654FE52B8A8C0C009DBA45 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FE42B8A8C0C009DBA45 /* PrimaryTextField.swift */; };
+		13654FE92B8F1B4E009DBA45 /* OTPAuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */; };
+		13654FEB2B8FA731009DBA45 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FEA2B8FA731009DBA45 /* OTPTextField.swift */; };
+		13654FED2B8FA8A4009DBA45 /* OTPStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FEC2B8FA8A4009DBA45 /* OTPStackView.swift */; };
+		13654FF22B95A44A009DBA45 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FF12B95A44A009DBA45 /* APICaller.swift */; };
+		13654FF42B95A805009DBA45 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FF32B95A805009DBA45 /* LoginViewModel.swift */; };
+		13654FF62B95ACA0009DBA45 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FF52B95ACA0009DBA45 /* MainPageViewController.swift */; };
+		13654FF82B95AE15009DBA45 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FF72B95AE15009DBA45 /* SignUpViewModel.swift */; };
+		1398E93D2B860F1600AFF1C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E93C2B860F1600AFF1C5 /* AppDelegate.swift */; };
+		1398E9462B860F1700AFF1C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1398E9452B860F1700AFF1C5 /* Assets.xcassets */; };
+		1398E9492B860F1700AFF1C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1398E9472B860F1700AFF1C5 /* LaunchScreen.storyboard */; };
+		1398E9552B86636500AFF1C5 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1398E9542B86636500AFF1C5 /* Poppins-Bold.ttf */; };
+		1398E9572B86637A00AFF1C5 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1398E9562B86637A00AFF1C5 /* Poppins-Light.ttf */; };
+		1398E9592B86638500AFF1C5 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1398E9582B86638500AFF1C5 /* Poppins-Regular.ttf */; };
+		1398E95B2B86639600AFF1C5 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1398E95A2B86639400AFF1C5 /* Poppins-Medium.ttf */; };
+		1398E95D2B86651500AFF1C5 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E95C2B86651500AFF1C5 /* Fonts.swift */; };
+		1398E95F2B8669E400AFF1C5 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E95E2B8669E400AFF1C5 /* Colors.swift */; };
+		1398E9642B866E3A00AFF1C5 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1398E9632B866E3A00AFF1C5 /* SnapKit */; };
+		1398E9662B866E5D00AFF1C5 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E9652B866E5D00AFF1C5 /* OnboardingViewController.swift */; };
+		1398E9692B867A5A00AFF1C5 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E9682B867A5A00AFF1C5 /* PrimaryButton.swift */; };
+		1398E9982B875BB700AFF1C5 /* SignInPassengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E9972B875BB700AFF1C5 /* SignInPassengerViewController.swift */; };
+		1398E99B2B88389600AFF1C5 /* SignUpPassengerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E99A2B88389600AFF1C5 /* SignUpPassengerViewController.swift */; };
+		1398E99E2B883E8D00AFF1C5 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E99D2B883E8D00AFF1C5 /* RegisterViewController.swift */; };
+		1398E9A12B8845C600AFF1C5 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E9A02B8845C600AFF1C5 /* StartViewController.swift */; };
+		1398E9A32B88A51100AFF1C5 /* OTPAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1398E9A22B88A51100AFF1C5 /* OTPAuthViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13654FE42B8A8C0C009DBA45 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
+		13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthenticationView.swift; sourceTree = "<group>"; };
+		13654FEA2B8FA731009DBA45 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
+		13654FEC2B8FA8A4009DBA45 /* OTPStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPStackView.swift; sourceTree = "<group>"; };
+		13654FF12B95A44A009DBA45 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		13654FF32B95A805009DBA45 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		13654FF52B95ACA0009DBA45 /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
+		13654FF72B95AE15009DBA45 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		1398E9392B860F1600AFF1C5 /* AutobusAlmaty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutobusAlmaty.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1398E93C2B860F1600AFF1C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1398E9452B860F1700AFF1C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1398E9482B860F1700AFF1C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1398E94A2B860F1700AFF1C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1398E9542B86636500AFF1C5 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../../Downloads/Poppins/Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		1398E9562B86637A00AFF1C5 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../../../../../Downloads/Poppins/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		1398E9582B86638500AFF1C5 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../../Downloads/Poppins/Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		1398E95A2B86639400AFF1C5 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Medium.ttf"; path = "../../../../../../Downloads/Poppins/Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		1398E95C2B86651500AFF1C5 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		1398E95E2B8669E400AFF1C5 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		1398E9652B866E5D00AFF1C5 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		1398E9682B867A5A00AFF1C5 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		1398E9972B875BB700AFF1C5 /* SignInPassengerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPassengerViewController.swift; sourceTree = "<group>"; };
+		1398E99A2B88389600AFF1C5 /* SignUpPassengerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPassengerViewController.swift; sourceTree = "<group>"; };
+		1398E99D2B883E8D00AFF1C5 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		1398E9A02B8845C600AFF1C5 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		1398E9A22B88A51100AFF1C5 /* OTPAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1398E9362B860F1600AFF1C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1398E9642B866E3A00AFF1C5 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13654FF02B95A432009DBA45 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				13654FF12B95A44A009DBA45 /* APICaller.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1398E9302B860F1600AFF1C5 = {
+			isa = PBXGroup;
+			children = (
+				1398E93B2B860F1600AFF1C5 /* AutobusAlmaty */,
+				1398E93A2B860F1600AFF1C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1398E93A2B860F1600AFF1C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1398E9392B860F1600AFF1C5 /* AutobusAlmaty.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1398E93B2B860F1600AFF1C5 /* AutobusAlmaty */ = {
+			isa = PBXGroup;
+			children = (
+				13654FF02B95A432009DBA45 /* API */,
+				1398E94A2B860F1700AFF1C5 /* Info.plist */,
+				1398E9A42B88D1A600AFF1C5 /* Supporting */,
+				1398E9602B866D7900AFF1C5 /* ViewControllers */,
+				1398E9522B86628F00AFF1C5 /* Resources */,
+				13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */,
+			);
+			path = AutobusAlmaty;
+			sourceTree = "<group>";
+		};
+		1398E9522B86628F00AFF1C5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1398E9672B867A4200AFF1C5 /* CustomViews */,
+				1398E95C2B86651500AFF1C5 /* Fonts.swift */,
+				1398E95E2B8669E400AFF1C5 /* Colors.swift */,
+				1398E9532B8662A000AFF1C5 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1398E9532B8662A000AFF1C5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1398E9542B86636500AFF1C5 /* Poppins-Bold.ttf */,
+				1398E9562B86637A00AFF1C5 /* Poppins-Light.ttf */,
+				1398E9582B86638500AFF1C5 /* Poppins-Regular.ttf */,
+				1398E95A2B86639400AFF1C5 /* Poppins-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		1398E9602B866D7900AFF1C5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1398E99F2B88459C00AFF1C5 /* StartViewControllers */,
+				1398E99C2B883E7000AFF1C5 /* RegisterViewControllers */,
+				1398E9962B875B8500AFF1C5 /* LoginViewController */,
+				1398E9612B866D8500AFF1C5 /* OnboardingViewController */,
+				1398E9A22B88A51100AFF1C5 /* OTPAuthViewController.swift */,
+				13654FEC2B8FA8A4009DBA45 /* OTPStackView.swift */,
+				13654FEA2B8FA731009DBA45 /* OTPTextField.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1398E9612B866D8500AFF1C5 /* OnboardingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1398E9652B866E5D00AFF1C5 /* OnboardingViewController.swift */,
+			);
+			path = OnboardingViewController;
+			sourceTree = "<group>";
+		};
+		1398E9672B867A4200AFF1C5 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				1398E9682B867A5A00AFF1C5 /* PrimaryButton.swift */,
+				13654FE42B8A8C0C009DBA45 /* PrimaryTextField.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		1398E9962B875B8500AFF1C5 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1398E9972B875BB700AFF1C5 /* SignInPassengerViewController.swift */,
+				1398E99A2B88389600AFF1C5 /* SignUpPassengerViewController.swift */,
+				13654FF32B95A805009DBA45 /* LoginViewModel.swift */,
+				13654FF72B95AE15009DBA45 /* SignUpViewModel.swift */,
+				13654FF52B95ACA0009DBA45 /* MainPageViewController.swift */,
+			);
+			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		1398E99C2B883E7000AFF1C5 /* RegisterViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1398E99D2B883E8D00AFF1C5 /* RegisterViewController.swift */,
+			);
+			path = RegisterViewControllers;
+			sourceTree = "<group>";
+		};
+		1398E99F2B88459C00AFF1C5 /* StartViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1398E9A02B8845C600AFF1C5 /* StartViewController.swift */,
+			);
+			path = StartViewControllers;
+			sourceTree = "<group>";
+		};
+		1398E9A42B88D1A600AFF1C5 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				1398E93C2B860F1600AFF1C5 /* AppDelegate.swift */,
+				1398E9452B860F1700AFF1C5 /* Assets.xcassets */,
+				1398E9472B860F1700AFF1C5 /* LaunchScreen.storyboard */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1398E9382B860F1600AFF1C5 /* AutobusAlmaty */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1398E94D2B860F1700AFF1C5 /* Build configuration list for PBXNativeTarget "AutobusAlmaty" */;
+			buildPhases = (
+				1398E9352B860F1600AFF1C5 /* Sources */,
+				1398E9362B860F1600AFF1C5 /* Frameworks */,
+				1398E9372B860F1600AFF1C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AutobusAlmaty;
+			packageProductDependencies = (
+				1398E9632B866E3A00AFF1C5 /* SnapKit */,
+			);
+			productName = AutobusAlmaty;
+			productReference = 1398E9392B860F1600AFF1C5 /* AutobusAlmaty.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1398E9312B860F1600AFF1C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1398E9382B860F1600AFF1C5 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 1398E9342B860F1600AFF1C5 /* Build configuration list for PBXProject "AutobusAlmaty" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1398E9302B860F1600AFF1C5;
+			packageReferences = (
+				1398E9622B866E3A00AFF1C5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = 1398E93A2B860F1600AFF1C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1398E9382B860F1600AFF1C5 /* AutobusAlmaty */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1398E9372B860F1600AFF1C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1398E9492B860F1700AFF1C5 /* LaunchScreen.storyboard in Resources */,
+				1398E9462B860F1700AFF1C5 /* Assets.xcassets in Resources */,
+				1398E9552B86636500AFF1C5 /* Poppins-Bold.ttf in Resources */,
+				1398E95B2B86639600AFF1C5 /* Poppins-Medium.ttf in Resources */,
+				1398E9572B86637A00AFF1C5 /* Poppins-Light.ttf in Resources */,
+				1398E9592B86638500AFF1C5 /* Poppins-Regular.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1398E9352B860F1600AFF1C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13654FEB2B8FA731009DBA45 /* OTPTextField.swift in Sources */,
+				1398E99E2B883E8D00AFF1C5 /* RegisterViewController.swift in Sources */,
+				13654FE92B8F1B4E009DBA45 /* OTPAuthenticationView.swift in Sources */,
+				1398E9692B867A5A00AFF1C5 /* PrimaryButton.swift in Sources */,
+				13654FF82B95AE15009DBA45 /* SignUpViewModel.swift in Sources */,
+				13654FF42B95A805009DBA45 /* LoginViewModel.swift in Sources */,
+				1398E95F2B8669E400AFF1C5 /* Colors.swift in Sources */,
+				1398E99B2B88389600AFF1C5 /* SignUpPassengerViewController.swift in Sources */,
+				1398E9A12B8845C600AFF1C5 /* StartViewController.swift in Sources */,
+				13654FF22B95A44A009DBA45 /* APICaller.swift in Sources */,
+				1398E9662B866E5D00AFF1C5 /* OnboardingViewController.swift in Sources */,
+				1398E95D2B86651500AFF1C5 /* Fonts.swift in Sources */,
+				1398E9982B875BB700AFF1C5 /* SignInPassengerViewController.swift in Sources */,
+				1398E93D2B860F1600AFF1C5 /* AppDelegate.swift in Sources */,
+				13654FED2B8FA8A4009DBA45 /* OTPStackView.swift in Sources */,
+				1398E9A32B88A51100AFF1C5 /* OTPAuthViewController.swift in Sources */,
+				13654FF62B95ACA0009DBA45 /* MainPageViewController.swift in Sources */,
+				13654FE52B8A8C0C009DBA45 /* PrimaryTextField.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1398E9472B860F1700AFF1C5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1398E9482B860F1700AFF1C5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1398E94B2B860F1700AFF1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1398E94C2B860F1700AFF1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1398E94E2B860F1700AFF1C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7PZ67BRVP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutobusAlmaty/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = roma.irgizme.AutobusAlmaty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1398E94F2B860F1700AFF1C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N7PZ67BRVP;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AutobusAlmaty/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = roma.irgizme.AutobusAlmaty;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1398E9342B860F1600AFF1C5 /* Build configuration list for PBXProject "AutobusAlmaty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1398E94B2B860F1700AFF1C5 /* Debug */,
+				1398E94C2B860F1700AFF1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1398E94D2B860F1700AFF1C5 /* Build configuration list for PBXNativeTarget "AutobusAlmaty" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1398E94E2B860F1700AFF1C5 /* Debug */,
+				1398E94F2B860F1700AFF1C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1398E9622B866E3A00AFF1C5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1398E9632B866E3A00AFF1C5 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1398E9622B866E3A00AFF1C5 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 1398E9312B860F1600AFF1C5 /* Project object */;
+}
