@@ -7,18 +7,23 @@
 
 import UIKit
 
+let appColor: UIColor = .primaryBlue
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    let mainViewController = MainViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .primaryWhite
-        window?.rootViewController = UINavigationController(rootViewController: OnboardingViewController())
+        window?.rootViewController = UINavigationController(rootViewController: MainViewController())
         Thread.sleep(forTimeInterval: 0.5)
+        
+        mainViewController.selectedIndex = 0
         return true
     }
 

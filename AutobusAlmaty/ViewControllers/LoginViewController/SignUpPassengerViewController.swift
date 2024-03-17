@@ -89,11 +89,11 @@ class SignUpPassengerViewController: UIViewController {
         
         switch userType {
         case .passenger:
-            phoneNumberTextField.placeholder = "Enter passenger phone number"
+            phoneNumberTextField.placeholder = "Enter passenger username"
             passwordTextField.placeholder = "Enter passenger password"
             confirmPasswordTextField.placeholder = "Confirm passenger password"
         case .driver:
-            phoneNumberTextField.placeholder = "Enter driver phone number"
+            phoneNumberTextField.placeholder = "Enter driver username"
             passwordTextField.placeholder = "Enter driver password"
             confirmPasswordTextField.placeholder = "Confirm driver password"
         }

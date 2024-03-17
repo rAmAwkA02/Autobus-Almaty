@@ -53,7 +53,7 @@ class SignInPassengerViewController: UIViewController {
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.backgroundColor = .primaryWhite
         textField.layer.cornerRadius = 8
-        textField.placeholder = "Phone number"
+        textField.placeholder = "Username"
         textField.font = .regular16
         textField.autocapitalizationType = .none
         return textField
