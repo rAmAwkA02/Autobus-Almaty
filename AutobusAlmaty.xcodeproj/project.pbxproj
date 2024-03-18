@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		134F7BA32BA68B8100480EE8 /* UIViewController+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BA22BA68B8100480EE8 /* UIViewController+Utils.swift */; };
+		134F7BA52BA68EB000480EE8 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BA42BA68EB000480EE8 /* MainViewController.swift */; };
+		134F7BA82BA6996E00480EE8 /* DriverHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BA72BA6996E00480EE8 /* DriverHomeViewController.swift */; };
+		134F7BAA2BA6E94E00480EE8 /* DriverCreatingRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BA92BA6E94E00480EE8 /* DriverCreatingRouteViewController.swift */; };
+		134F7BAD2BA8399200480EE8 /* DriverCreatingRouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BAC2BA8399200480EE8 /* DriverCreatingRouteViewModel.swift */; };
+		134F7BAF2BA83AC900480EE8 /* LocationChooseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BAE2BA83AC900480EE8 /* LocationChooseViewController.swift */; };
+		134F7BB12BA83F9000480EE8 /* LocationChooseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BB02BA83F9000480EE8 /* LocationChooseViewModel.swift */; };
+		134F7BB52BA8BBE500480EE8 /* TimeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BB42BA8BBE500480EE8 /* TimeSelectionViewController.swift */; };
+		134F7BB72BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BB62BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift */; };
 		13654FE52B8A8C0C009DBA45 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FE42B8A8C0C009DBA45 /* PrimaryTextField.swift */; };
 		13654FE92B8F1B4E009DBA45 /* OTPAuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */; };
 		13654FEB2B8FA731009DBA45 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FEA2B8FA731009DBA45 /* OTPTextField.swift */; };
@@ -35,6 +44,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		134F7BA22BA68B8100480EE8 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
+		134F7BA42BA68EB000480EE8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		134F7BA72BA6996E00480EE8 /* DriverHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverHomeViewController.swift; sourceTree = "<group>"; };
+		134F7BA92BA6E94E00480EE8 /* DriverCreatingRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCreatingRouteViewController.swift; sourceTree = "<group>"; };
+		134F7BAC2BA8399200480EE8 /* DriverCreatingRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCreatingRouteViewModel.swift; sourceTree = "<group>"; };
+		134F7BAE2BA83AC900480EE8 /* LocationChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChooseViewController.swift; sourceTree = "<group>"; };
+		134F7BB02BA83F9000480EE8 /* LocationChooseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChooseViewModel.swift; sourceTree = "<group>"; };
+		134F7BB42BA8BBE500480EE8 /* TimeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionViewController.swift; sourceTree = "<group>"; };
+		134F7BB62BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionCalendarViewController.swift; sourceTree = "<group>"; };
 		13654FE42B8A8C0C009DBA45 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
 		13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthenticationView.swift; sourceTree = "<group>"; };
 		13654FEA2B8FA731009DBA45 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
@@ -75,6 +93,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		134F7B952BA6843300480EE8 /* DriverPage */ = {
+			isa = PBXGroup;
+			children = (
+				134F7BA62BA6994900480EE8 /* DriveHomePage */,
+				134F7BA12BA68B4200480EE8 /* UdemyTabBar */,
+			);
+			path = DriverPage;
+			sourceTree = "<group>";
+		};
+		134F7BA12BA68B4200480EE8 /* UdemyTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				134F7BA22BA68B8100480EE8 /* UIViewController+Utils.swift */,
+				134F7BA42BA68EB000480EE8 /* MainViewController.swift */,
+			);
+			path = UdemyTabBar;
+			sourceTree = "<group>";
+		};
+		134F7BA62BA6994900480EE8 /* DriveHomePage */ = {
+			isa = PBXGroup;
+			children = (
+				134F7BAB2BA8397C00480EE8 /* Creating */,
+				134F7BA72BA6996E00480EE8 /* DriverHomeViewController.swift */,
+			);
+			path = DriveHomePage;
+			sourceTree = "<group>";
+		};
+		134F7BAB2BA8397C00480EE8 /* Creating */ = {
+			isa = PBXGroup;
+			children = (
+				134F7BA92BA6E94E00480EE8 /* DriverCreatingRouteViewController.swift */,
+				134F7BAC2BA8399200480EE8 /* DriverCreatingRouteViewModel.swift */,
+				134F7BAE2BA83AC900480EE8 /* LocationChooseViewController.swift */,
+				134F7BB02BA83F9000480EE8 /* LocationChooseViewModel.swift */,
+				134F7BB42BA8BBE500480EE8 /* TimeSelectionViewController.swift */,
+				134F7BB62BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift */,
+			);
+			path = Creating;
+			sourceTree = "<group>";
+		};
 		13654FF02B95A432009DBA45 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,12 +160,12 @@
 		1398E93B2B860F1600AFF1C5 /* AutobusAlmaty */ = {
 			isa = PBXGroup;
 			children = (
+				134F7B952BA6843300480EE8 /* DriverPage */,
 				13654FF02B95A432009DBA45 /* API */,
 				1398E94A2B860F1700AFF1C5 /* Info.plist */,
 				1398E9A42B88D1A600AFF1C5 /* Supporting */,
 				1398E9602B866D7900AFF1C5 /* ViewControllers */,
 				1398E9522B86628F00AFF1C5 /* Resources */,
-				13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */,
 			);
 			path = AutobusAlmaty;
 			sourceTree = "<group>";
@@ -144,6 +202,7 @@
 				1398E9A22B88A51100AFF1C5 /* OTPAuthViewController.swift */,
 				13654FEC2B8FA8A4009DBA45 /* OTPStackView.swift */,
 				13654FEA2B8FA731009DBA45 /* OTPTextField.swift */,
+				13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -287,17 +346,26 @@
 				1398E99E2B883E8D00AFF1C5 /* RegisterViewController.swift in Sources */,
 				13654FE92B8F1B4E009DBA45 /* OTPAuthenticationView.swift in Sources */,
 				1398E9692B867A5A00AFF1C5 /* PrimaryButton.swift in Sources */,
+				134F7BB52BA8BBE500480EE8 /* TimeSelectionViewController.swift in Sources */,
+				134F7BA82BA6996E00480EE8 /* DriverHomeViewController.swift in Sources */,
 				13654FF82B95AE15009DBA45 /* SignUpViewModel.swift in Sources */,
 				13654FF42B95A805009DBA45 /* LoginViewModel.swift in Sources */,
 				1398E95F2B8669E400AFF1C5 /* Colors.swift in Sources */,
+				134F7BA32BA68B8100480EE8 /* UIViewController+Utils.swift in Sources */,
 				1398E99B2B88389600AFF1C5 /* SignUpPassengerViewController.swift in Sources */,
 				1398E9A12B8845C600AFF1C5 /* StartViewController.swift in Sources */,
+				134F7BAA2BA6E94E00480EE8 /* DriverCreatingRouteViewController.swift in Sources */,
 				13654FF22B95A44A009DBA45 /* APICaller.swift in Sources */,
+				134F7BA52BA68EB000480EE8 /* MainViewController.swift in Sources */,
+				134F7BAF2BA83AC900480EE8 /* LocationChooseViewController.swift in Sources */,
 				1398E9662B866E5D00AFF1C5 /* OnboardingViewController.swift in Sources */,
 				1398E95D2B86651500AFF1C5 /* Fonts.swift in Sources */,
 				1398E9982B875BB700AFF1C5 /* SignInPassengerViewController.swift in Sources */,
 				1398E93D2B860F1600AFF1C5 /* AppDelegate.swift in Sources */,
+				134F7BB12BA83F9000480EE8 /* LocationChooseViewModel.swift in Sources */,
 				13654FED2B8FA8A4009DBA45 /* OTPStackView.swift in Sources */,
+				134F7BAD2BA8399200480EE8 /* DriverCreatingRouteViewModel.swift in Sources */,
+				134F7BB72BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift in Sources */,
 				1398E9A32B88A51100AFF1C5 /* OTPAuthViewController.swift in Sources */,
 				13654FF62B95ACA0009DBA45 /* MainPageViewController.swift in Sources */,
 				13654FE52B8A8C0C009DBA45 /* PrimaryTextField.swift in Sources */,

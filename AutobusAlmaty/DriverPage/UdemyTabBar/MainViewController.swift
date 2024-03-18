@@ -16,9 +16,9 @@ class MainViewController: UITabBarController {
     }
 
     private func setupViews() {
-        let homeVC = AccountSummaryViewController()
-        let addRouteVC = MoveMoneyViewController()
-        let profileVC = MoreViewController()
+        let homeVC = DriverHomeViewController()
+        let addRouteVC = DriverAddingRouteViewController()
+        let profileVC = DriverProfileViewController()
 
         homeVC.setTabBarImage(imageName: "house", title: "Home")
         addRouteVC.setTabBarImage(imageName: "plus", title: "Add Route")
@@ -49,19 +49,21 @@ class MainViewController: UITabBarController {
     }
 }
 
-class AccountSummaryViewController: UIViewController {
+class DriverAddingRouteViewController: UIViewController {
+    
     override func viewDidLoad() {
-        view.backgroundColor = .systemGreen
+        view.backgroundColor = .primaryWhite
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let vc = DriverCreatingRouteViewController()
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        present(vc, animated: true)
     }
 }
 
-class MoveMoneyViewController: UIViewController {
-    override func viewDidLoad() {
-        view.backgroundColor = .systemOrange
-    }
-}
-
-class MoreViewController: UIViewController {
+class DriverProfileViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .systemPurple
     }

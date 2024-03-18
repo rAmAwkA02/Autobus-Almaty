@@ -20,5 +20,53 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EDE72E4-9FE4-4A93-82F9-7FF2E7B9A733"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AutobusAlmaty/DriverPage/UdemyTabBar/DriveHomePage/ViewControlllerCreate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "fromTextFieldTapped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3EDE72E4-9FE4-4A93-82F9-7FF2E7B9A733 - f5cf00816238bd17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutobusAlmaty.ViewControllerCreate.onAction() -&gt; ()"
+                  moduleName = "AutobusAlmaty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramazanamangeldin/Desktop/DiplomaProjectIOS/AutobusAlmaty/AutobusAlmaty/DriverPage/UdemyTabBar/DriveHomePage/ViewControlllerCreate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "184">
+               </Location>
+               <Location
+                  uuid = "3EDE72E4-9FE4-4A93-82F9-7FF2E7B9A733 - f5cf00816238bd17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AutobusAlmaty.ViewControllerCreate.onAction() -&gt; ()"
+                  moduleName = "AutobusAlmaty"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ramazanamangeldin/Desktop/DiplomaProjectIOS/AutobusAlmaty/AutobusAlmaty/DriverPage/UdemyTabBar/DriveHomePage/ViewControlllerCreate.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

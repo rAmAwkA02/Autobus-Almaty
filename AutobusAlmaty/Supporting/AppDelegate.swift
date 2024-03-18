@@ -13,7 +13,7 @@ let appColor: UIColor = .primaryBlue
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    let mainViewController = MainViewController()
+//    let mainViewController = MainViewController()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         
@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = UINavigationController(rootViewController: MainViewController())
         Thread.sleep(forTimeInterval: 0.5)
         
-        mainViewController.selectedIndex = 0
+//        mainViewController.selectedIndex = 0
         return true
     }
 
