@@ -41,9 +41,5 @@ extension DriverHomeViewController {
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
-//        NSLayoutConstraint.activate([
-//            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-//            stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-//        ])
     }
 }

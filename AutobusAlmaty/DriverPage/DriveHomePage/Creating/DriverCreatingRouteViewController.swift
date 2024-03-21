@@ -7,8 +7,11 @@
 
 import UIKit
 import SnapKit
+import HorizonCalendar
 
-class DriverCreatingRouteViewController: UIViewController {
+final class DriverCreatingRouteViewController: UIViewController {
+
+    private var selectedDate: Day?
     
     private let viewModel = DriverCreatingRouteViewModel()
     
@@ -51,7 +54,7 @@ class DriverCreatingRouteViewController: UIViewController {
         return image
     }()
     
-    private let createButton: UIButton = {
+    private var createButton: UIButton = {
         let button = UIButton()
         button.setTitle("Create", for: .normal)
         button.backgroundColor = .primaryBlue
@@ -59,6 +62,7 @@ class DriverCreatingRouteViewController: UIViewController {
         button.layer.cornerRadius = 8
         button.titleLabel?.font = .medium16
         button.setTitleColor(.primaryWhite, for: .normal)
+        button.addTarget(self, action: #selector(didTapCreate), for: .touchUpInside)
         return button
     }()
     
@@ -74,6 +78,7 @@ class DriverCreatingRouteViewController: UIViewController {
     }
     
     func configUI() {
+        view.backgroundColor = .primaryWhite
         view.addSubview(stackView)
         
         timeButton = makeButton()
@@ -156,6 +161,7 @@ class DriverCreatingRouteViewController: UIViewController {
         locationButton.addTarget(self, action: #selector(didTapLocation), for: .touchUpInside)
         dateButton.addTarget(self, action: #selector(didTapDate), for: .touchUpInside)
         timeButton.addTarget(self, action: #selector(didTapTime), for: .touchUpInside)
+//        createButton.addTarget(self, action: #selector(didTapCreate), for: .touchUpInside)
         
     }
     
@@ -175,11 +181,32 @@ class DriverCreatingRouteViewController: UIViewController {
     
     @objc private func didTapDate() {
         let vc = DateSelectionCalendarViewController()
+        vc.selectedDay = self.selectedDate
+        vc.didSelectDay = { [weak self] day in
+            self?.selectedDate = day
+            self?.dateLabel.text = day.description
+        }
         present(vc, animated: true)
     }
     
     @objc private func didTapTime() {
         let vc = TimeSelectionViewController()
+        vc.delegate = self
         present(vc, animated: true)
+    }
+    
+    @objc private func didTapCreate() {
+        let vc = RateConfigViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension DriverCreatingRouteViewController: TimeSelectionDelegate {
+    
+    func didSelect(date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let formattedDateString = dateFormatter.string(from: date)
+        timeLabel.text = formattedDateString
     }
 }

@@ -16,6 +16,9 @@
 		134F7BB12BA83F9000480EE8 /* LocationChooseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BB02BA83F9000480EE8 /* LocationChooseViewModel.swift */; };
 		134F7BB52BA8BBE500480EE8 /* TimeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BB42BA8BBE500480EE8 /* TimeSelectionViewController.swift */; };
 		134F7BB72BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BB62BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift */; };
+		134F7BB92BAAFE8400480EE8 /* HistoryCalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BB82BAAFE8400480EE8 /* HistoryCalendarViewController.swift */; };
+		134F7BBC2BAB044800480EE8 /* HorizonCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 134F7BBB2BAB044800480EE8 /* HorizonCalendar */; };
+		134F7BBE2BAC318A00480EE8 /* RateConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134F7BBD2BAC318A00480EE8 /* RateConfigViewController.swift */; };
 		13654FE52B8A8C0C009DBA45 /* PrimaryTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FE42B8A8C0C009DBA45 /* PrimaryTextField.swift */; };
 		13654FE92B8F1B4E009DBA45 /* OTPAuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */; };
 		13654FEB2B8FA731009DBA45 /* OTPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13654FEA2B8FA731009DBA45 /* OTPTextField.swift */; };
@@ -46,13 +49,15 @@
 /* Begin PBXFileReference section */
 		134F7BA22BA68B8100480EE8 /* UIViewController+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Utils.swift"; sourceTree = "<group>"; };
 		134F7BA42BA68EB000480EE8 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		134F7BA72BA6996E00480EE8 /* DriverHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverHomeViewController.swift; sourceTree = "<group>"; };
+		134F7BA72BA6996E00480EE8 /* DriverHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DriverHomeViewController.swift; path = ../DriveHomePage/DriverHomeViewController.swift; sourceTree = "<group>"; };
 		134F7BA92BA6E94E00480EE8 /* DriverCreatingRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCreatingRouteViewController.swift; sourceTree = "<group>"; };
 		134F7BAC2BA8399200480EE8 /* DriverCreatingRouteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverCreatingRouteViewModel.swift; sourceTree = "<group>"; };
 		134F7BAE2BA83AC900480EE8 /* LocationChooseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChooseViewController.swift; sourceTree = "<group>"; };
 		134F7BB02BA83F9000480EE8 /* LocationChooseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChooseViewModel.swift; sourceTree = "<group>"; };
 		134F7BB42BA8BBE500480EE8 /* TimeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSelectionViewController.swift; sourceTree = "<group>"; };
 		134F7BB62BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelectionCalendarViewController.swift; sourceTree = "<group>"; };
+		134F7BB82BAAFE8400480EE8 /* HistoryCalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCalendarViewController.swift; sourceTree = "<group>"; };
+		134F7BBD2BAC318A00480EE8 /* RateConfigViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateConfigViewController.swift; sourceTree = "<group>"; };
 		13654FE42B8A8C0C009DBA45 /* PrimaryTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryTextField.swift; sourceTree = "<group>"; };
 		13654FE82B8F1B4E009DBA45 /* OTPAuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthenticationView.swift; sourceTree = "<group>"; };
 		13654FEA2B8FA731009DBA45 /* OTPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTextField.swift; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				134F7BBC2BAB044800480EE8 /* HorizonCalendar in Frameworks */,
 				1398E9642B866E3A00AFF1C5 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +111,7 @@
 		134F7BA12BA68B4200480EE8 /* UdemyTabBar */ = {
 			isa = PBXGroup;
 			children = (
+				134F7BA72BA6996E00480EE8 /* DriverHomeViewController.swift */,
 				134F7BA22BA68B8100480EE8 /* UIViewController+Utils.swift */,
 				134F7BA42BA68EB000480EE8 /* MainViewController.swift */,
 			);
@@ -115,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				134F7BAB2BA8397C00480EE8 /* Creating */,
-				134F7BA72BA6996E00480EE8 /* DriverHomeViewController.swift */,
 			);
 			path = DriveHomePage;
 			sourceTree = "<group>";
@@ -129,6 +135,8 @@
 				134F7BB02BA83F9000480EE8 /* LocationChooseViewModel.swift */,
 				134F7BB42BA8BBE500480EE8 /* TimeSelectionViewController.swift */,
 				134F7BB62BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift */,
+				134F7BB82BAAFE8400480EE8 /* HistoryCalendarViewController.swift */,
+				134F7BBD2BAC318A00480EE8 /* RateConfigViewController.swift */,
 			);
 			path = Creating;
 			sourceTree = "<group>";
@@ -280,6 +288,7 @@
 			name = AutobusAlmaty;
 			packageProductDependencies = (
 				1398E9632B866E3A00AFF1C5 /* SnapKit */,
+				134F7BBB2BAB044800480EE8 /* HorizonCalendar */,
 			);
 			productName = AutobusAlmaty;
 			productReference = 1398E9392B860F1600AFF1C5 /* AutobusAlmaty.app */;
@@ -311,6 +320,7 @@
 			mainGroup = 1398E9302B860F1600AFF1C5;
 			packageReferences = (
 				1398E9622B866E3A00AFF1C5 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				134F7BBA2BAB044800480EE8 /* XCRemoteSwiftPackageReference "HorizonCalendar" */,
 			);
 			productRefGroup = 1398E93A2B860F1600AFF1C5 /* Products */;
 			projectDirPath = "";
@@ -347,6 +357,7 @@
 				13654FE92B8F1B4E009DBA45 /* OTPAuthenticationView.swift in Sources */,
 				1398E9692B867A5A00AFF1C5 /* PrimaryButton.swift in Sources */,
 				134F7BB52BA8BBE500480EE8 /* TimeSelectionViewController.swift in Sources */,
+				134F7BB92BAAFE8400480EE8 /* HistoryCalendarViewController.swift in Sources */,
 				134F7BA82BA6996E00480EE8 /* DriverHomeViewController.swift in Sources */,
 				13654FF82B95AE15009DBA45 /* SignUpViewModel.swift in Sources */,
 				13654FF42B95A805009DBA45 /* LoginViewModel.swift in Sources */,
@@ -366,6 +377,7 @@
 				13654FED2B8FA8A4009DBA45 /* OTPStackView.swift in Sources */,
 				134F7BAD2BA8399200480EE8 /* DriverCreatingRouteViewModel.swift in Sources */,
 				134F7BB72BA8BC1200480EE8 /* DateSelectionCalendarViewController.swift in Sources */,
+				134F7BBE2BAC318A00480EE8 /* RateConfigViewController.swift in Sources */,
 				1398E9A32B88A51100AFF1C5 /* OTPAuthViewController.swift in Sources */,
 				13654FF62B95ACA0009DBA45 /* MainPageViewController.swift in Sources */,
 				13654FE52B8A8C0C009DBA45 /* PrimaryTextField.swift in Sources */,
@@ -578,6 +590,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		134F7BBA2BAB044800480EE8 /* XCRemoteSwiftPackageReference "HorizonCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/HorizonCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		1398E9622B866E3A00AFF1C5 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
@@ -589,6 +609,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		134F7BBB2BAB044800480EE8 /* HorizonCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 134F7BBA2BAB044800480EE8 /* XCRemoteSwiftPackageReference "HorizonCalendar" */;
+			productName = HorizonCalendar;
+		};
 		1398E9632B866E3A00AFF1C5 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 1398E9622B866E3A00AFF1C5 /* XCRemoteSwiftPackageReference "SnapKit" */;

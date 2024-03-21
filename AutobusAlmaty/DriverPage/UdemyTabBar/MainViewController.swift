@@ -17,7 +17,7 @@ class MainViewController: UITabBarController {
 
     private func setupViews() {
         let homeVC = DriverHomeViewController()
-        let addRouteVC = DriverAddingRouteViewController()
+        let addRouteVC = DriverCreatingRouteViewController()
         let profileVC = DriverProfileViewController()
 
         homeVC.setTabBarImage(imageName: "house", title: "Home")
@@ -46,20 +46,6 @@ class MainViewController: UITabBarController {
     private func setupTabBar() {
         tabBar.tintColor = appColor
         tabBar.isTranslucent = false
-    }
-}
-
-class DriverAddingRouteViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        view.backgroundColor = .primaryWhite
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        let vc = DriverCreatingRouteViewController()
-        vc.modalPresentationStyle = .fullScreen
-        vc.modalTransitionStyle = .crossDissolve
-        present(vc, animated: true)
     }
 }
 
