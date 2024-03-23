@@ -66,8 +66,8 @@ final class TimeSelectionViewController: UIViewController {
         titleLabel.font = .bold16
         view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
-            $0.leading.equalToSuperview().offset(20)
             $0.top.equalToSuperview().offset(20)
+            $0.leading.equalToSuperview().inset(20)
         }
     }
     

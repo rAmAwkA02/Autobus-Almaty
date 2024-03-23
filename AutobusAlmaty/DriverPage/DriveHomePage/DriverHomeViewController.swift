@@ -8,38 +8,57 @@
 import UIKit
 import SnapKit
 
-class DriverHomeViewController: UIViewController {
+class DriverHomeViewController: UIViewController, UITableViewDelegate {
     
-    let stackView = UIStackView()
+    var tableView = UITableView()
     let label = UILabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        style()
-        layout()
-    }
-}
-
-extension DriverHomeViewController {
-    func style() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 20
-        
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "there's no rotes"
-        label.font = .bold24
-        label.textColor = .primaryBlue
+        configUI()
+        setupTableView()
+    
     }
     
-    func layout() {
-        stackView.addArrangedSubview(label)
+    private func setupTableView() {
         
-        view.addSubview(stackView)
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        stackView.snp.makeConstraints { make in
-            make.centerX.equalToSuperview()
-            make.centerY.equalToSuperview()
+        tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseID)
+        tableView.rowHeight = AccountSummaryCell.rowHeight
+        tableView.separatorStyle = .none
+    }
+    
+    private func configUI() {
+        
+        view.backgroundColor = .primaryWhite
+        
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(8)
+            $0.leading.trailing.equalToSuperview().inset(8)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-16)
         }
     }
 }
+
+extension DriverHomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath)
+        as! AccountSummaryCell
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+}
+
+extension DriverHomeViewController: UITabBarDelegate {
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        // Handle cell selection
+    }
+}
+
+
