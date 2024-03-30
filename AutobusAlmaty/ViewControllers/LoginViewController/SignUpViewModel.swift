@@ -8,12 +8,23 @@
 import Foundation
 
 class SignUpViewModel {
-        
-    func register(user: User, callback: @escaping (String) -> ()) {
+    
+    var user: String?
+    func register(user: User, callback: @escaping (UserREST) -> ()) {
         APICaller.shared.register(user: user) { res in
             switch res {
             case .success(let success):
-                print(success)
+                callback(success)
+            case .failure(let failure):
+                print(failure)
+            }
+        }
+    }
+    
+    func resend(user: User, callback: @escaping (String) -> ()) {
+        APICaller.shared.resend(user: user) { res in
+            switch res {
+            case .success(let success):
                 callback(success)
             case .failure(let failure):
                 print(failure)

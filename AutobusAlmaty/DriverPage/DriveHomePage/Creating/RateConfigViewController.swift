@@ -7,8 +7,19 @@
 
 import UIKit
 
-class RateConfigViewController: UIViewController, UITextViewDelegate, UITableViewDelegate {
+public struct dictionary: Codable {
+    public static var data: [[String]] = []
     
+}
+protocol TableReloadDelegate: AnyObject {
+    func reloadData()
+}
+
+class RateConfigViewController: UIViewController, UITextViewDelegate, UITableViewDelegate, TableReloadDelegate {
+    func reloadData() {
+        tableView.reloadData()
+    }
+
     var tableView = UITableView()
     
     override func viewDidLoad() {
@@ -37,10 +48,13 @@ class RateConfigViewController: UIViewController, UITextViewDelegate, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(AccountSummaryCell.self, forCellReuseIdentifier: AccountSummaryCell.reuseID)
-        tableView.rowHeight = AccountSummaryCell.rowHeight
+        tableView.register(RateConfigCell.self, forCellReuseIdentifier: RateConfigCell.reuseID)
+        tableView.rowHeight = RateConfigCell.rowHeight
         tableView.separatorStyle = .none
+        tableView.reloadData()
     }
+    
+    
     
     private func configUI() {
         
@@ -49,9 +63,10 @@ class RateConfigViewController: UIViewController, UITextViewDelegate, UITableVie
         title = "Creating a route"
         
         let descriptionTextView = UITextView()
-        descriptionTextView.font = .bold14
+        descriptionTextView.font = .medium14
         descriptionTextView.text = "Description"
-        descriptionTextView.textColor = .black
+        // TODO: when tap to view, обшм ештеңе жазылмауы керек тап болғанда вюға
+        descriptionTextView.textColor = .lightGray
         descriptionTextView.layer.borderWidth = 1.0
         descriptionTextView.clipsToBounds = true
         descriptionTextView.layer.cornerRadius = 8.0
@@ -63,17 +78,18 @@ class RateConfigViewController: UIViewController, UITextViewDelegate, UITableVie
         descriptionTextView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(36)
             $0.leading.trailing.equalToSuperview().inset(16)
-            $0.height.equalTo(64)
+            $0.height.equalTo(120)
         }
         
         let routeConfigLabel = UILabel()
         routeConfigLabel.text = "Rate config"
         routeConfigLabel.font = .bold14
+        routeConfigLabel.textColor = .primaryBlue
         
         let addingRoteConfigButton = UIButton()
         let image = UIImage(systemName: "plus")
         addingRoteConfigButton.setImage(image, for: .normal)
-        addingRoteConfigButton.tintColor = .black
+        addingRoteConfigButton.tintColor = .primaryBlue
         addingRoteConfigButton.addTarget(self, action: #selector(didTapPlusButton), for: .touchUpInside)
         
         let hContainer = UIStackView(arrangedSubviews: [routeConfigLabel, addingRoteConfigButton])
@@ -93,6 +109,7 @@ class RateConfigViewController: UIViewController, UITextViewDelegate, UITableVie
         createButton.layer.cornerRadius = 8
         createButton.titleLabel?.font = .medium16
         createButton.setTitleColor(.primaryWhite, for: .normal)
+        createButton.addTarget(self, action: #selector(createButtonTapDid), for: .touchUpInside)
         view.addSubview(createButton)
         
         createButton.snp.makeConstraints {
@@ -110,6 +127,13 @@ class RateConfigViewController: UIViewController, UITextViewDelegate, UITableVie
         
     }
     
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor.lightGray {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+    
     private func setupKeyboardDismissal() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         tapGesture.cancelsTouchesInView = false
@@ -122,6 +146,7 @@ class RateConfigViewController: UIViewController, UITextViewDelegate, UITableVie
     
     @objc func didTapPlusButton() {
         let vc = CreateStationViewController()
+        vc.tableReloadDelegate = self
         present(vc, animated: true)
     }
     
@@ -129,17 +154,28 @@ class RateConfigViewController: UIViewController, UITextViewDelegate, UITableVie
         // Handle the back action, e.g., pop the view controller
         navigationController?.popViewController(animated: true)
     }
+    
+    @objc func createButtonTapDid() {
+        // TODO:
+        let vc = DriversRoutesAndCheckingViewController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 extension RateConfigViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: AccountSummaryCell.reuseID, for: indexPath)
-        as! AccountSummaryCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: RateConfigCell.reuseID, for: indexPath)
+        as! RateConfigCell
+        let labelText = dictionary.data[indexPath.row]
+        cell.stationNameLabel.text = labelText[0]
+        cell.arriveTimeLabel.text = labelText[1]
+        cell.departureTimeLabel.text = labelText[2]
+        cell.ticketCostLabel.text = labelText[3]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return dictionary.data.count
     }
 }
 

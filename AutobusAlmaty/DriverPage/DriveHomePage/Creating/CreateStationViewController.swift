@@ -8,14 +8,27 @@
 import UIKit
 
 class CreateStationViewController: UIViewController {
-
+    weak var tableReloadDelegate: TableReloadDelegate?
+    
+    var data = dictionary.data
+    let stationNameTextField = UITextField()
+    let arriveTimeTextField = UITextField()
+    let departureTimeTextField = UITextField()
+    let costTextField = UITextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
     }
-    
+    @objc func createButtonClicked() {
+        var dataText = ["\(stationNameTextField.text!)", "Arrived time: \(arriveTimeTextField.text!)", "Departure time: \(departureTimeTextField.text!)", "\(costTextField.text!)"]
+        dictionary.data.append(dataText)
+        tableReloadDelegate?.reloadData()
+        dismiss(animated: true)
+        // Perform your action here, such as opening a new view controller or URL
+    }
     // UI
-    private func configUI() {
+    public func configUI() {
         view.backgroundColor = .primaryWhite
         
         let titleLabel = UILabel()
@@ -27,7 +40,7 @@ class CreateStationViewController: UIViewController {
             $0.leading.equalToSuperview().inset(16)
         }
         
-        let stationNameTextField = UITextField()
+        
         stationNameTextField.translatesAutoresizingMaskIntoConstraints = false
         stationNameTextField.backgroundColor = .primaryWhite
         stationNameTextField.clipsToBounds = true
@@ -44,7 +57,7 @@ class CreateStationViewController: UIViewController {
             $0.height.equalTo(40)
         }
         
-        let departureTimeTextField = UITextField()
+       
         departureTimeTextField.translatesAutoresizingMaskIntoConstraints = false
         departureTimeTextField.backgroundColor = .primaryWhite
         departureTimeTextField.clipsToBounds = true
@@ -54,7 +67,7 @@ class CreateStationViewController: UIViewController {
         departureTimeTextField.placeholder = "Departure time"
         departureTimeTextField.layer.borderWidth = 1
         
-        let arriveTimeTextField = UITextField()
+        
         arriveTimeTextField.translatesAutoresizingMaskIntoConstraints = false
         arriveTimeTextField.backgroundColor = .primaryWhite
         arriveTimeTextField.clipsToBounds = true
@@ -82,7 +95,7 @@ class CreateStationViewController: UIViewController {
             $0.height.equalTo(40)
         }
         
-        let costTextField = UITextField()
+        
         costTextField.translatesAutoresizingMaskIntoConstraints = false
         costTextField.backgroundColor = .primaryWhite
         costTextField.clipsToBounds = true
@@ -106,6 +119,7 @@ class CreateStationViewController: UIViewController {
         createButton.layer.cornerRadius = 8
         createButton.titleLabel?.font = .medium16
         createButton.setTitleColor(.primaryWhite, for: .normal)
+        createButton.addTarget(self, action: #selector(createButtonClicked), for:.touchUpInside)
         view.addSubview(createButton)
         
         createButton.snp.makeConstraints {
@@ -114,6 +128,6 @@ class CreateStationViewController: UIViewController {
             $0.height.equalTo(40)
             
         }
-            
     }
+    
 }

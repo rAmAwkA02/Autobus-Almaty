@@ -25,13 +25,15 @@ class MainViewController: UITabBarController {
         profileVC.setTabBarImage(imageName: "person.crop.circle", title: "Profile")
 
         let homeNC = UINavigationController(rootViewController: homeVC)
-        let addRouteNC = UINavigationController(rootViewController: addRouteVC)
-        let profileNC = UINavigationController(rootViewController: profileVC)
+//        let addRouteNC = UINavigationController(rootViewController: addRouteVC)
+//        let profileNC = UINavigationController(rootViewController: profileVC)
 
-        homeNC.navigationBar.barTintColor = appColor
+        homeNC.navigationBar.isHidden = true
+//        addRouteNC.navigationBar.isHidden = true
+//        profileNC.navigationBar.isHidden = true
         hideNavigationBarLine(homeNC.navigationBar)
         
-        let tabBarList = [homeNC, addRouteNC, profileNC]
+        let tabBarList = [homeVC, addRouteVC, profileVC]
 
         viewControllers = tabBarList
     }
@@ -49,7 +51,7 @@ class MainViewController: UITabBarController {
     }
 }
 
-class DriverProfileViewController: UIViewController {
+class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         view.backgroundColor = .systemPurple
     }

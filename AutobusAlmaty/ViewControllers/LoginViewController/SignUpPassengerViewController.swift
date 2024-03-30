@@ -89,11 +89,11 @@ class SignUpPassengerViewController: UIViewController {
         
         switch userType {
         case .passenger:
-            phoneNumberTextField.placeholder = "Enter passenger username"
+            phoneNumberTextField.placeholder = "Enter passenger phone number"
             passwordTextField.placeholder = "Enter passenger password"
             confirmPasswordTextField.placeholder = "Confirm passenger password"
         case .driver:
-            phoneNumberTextField.placeholder = "Enter driver username"
+            phoneNumberTextField.placeholder = "Enter driver phone number"
             passwordTextField.placeholder = "Enter driver password"
             confirmPasswordTextField.placeholder = "Confirm driver password"
         }
@@ -124,16 +124,22 @@ class SignUpPassengerViewController: UIViewController {
     }
     
     @objc func didTapButton() {
-        viewModel.register(user: User(username:
-                                        phoneNumberTextField.text!,
-                                      password: passwordTextField.text!), callback: { [weak self] res in
-            
-            DispatchQueue.main.async { [weak self] in
-                let alert = UIAlertController(title: "!!!", message: res, preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-                
-                self?.present(alert, animated: true, completion: nil)
+        let user = User(username:
+                            phoneNumberTextField.text!,
+                          password: passwordTextField.text!)
+        viewModel.register(user: user, callback: { [weak self] res in
+            DispatchQueue.main.async {
+                let vc = OTPAuthViewController(correctOTP: String(res.token))
+                print("code \(res.token)")
+                self?.navigationController?.pushViewController(vc, animated: true)
             }
+//            }
+//            DispatchQueue.main.async { [weak self] in
+//                let alert = UIAlertController(title: "!!!", message: res, preferredStyle: .alert)
+//                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+//
+//                self?.present(alert, animated: true, completion: nil)
+//            }
         })
         
         

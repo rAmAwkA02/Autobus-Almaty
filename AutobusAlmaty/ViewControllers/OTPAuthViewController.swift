@@ -9,11 +9,12 @@ import UIKit
 
 class OTPAuthViewController: UIViewController {
     private let otpStackView = OTPStackView()
-    
     private var timer: Timer?
     private var remainingTime = 30 // duration in seconds
     private var isTimerRunning = false
-    
+    private var correctOTP: String?
+    private var viewModel: OTPAuthViewModel = OTPAuthViewModel()
+
     private let confirmCodeLabel: UILabel = {
         let label = UILabel()
         label.text = "Confirmation Code"
@@ -42,6 +43,15 @@ class OTPAuthViewController: UIViewController {
         $0.titleLabel?.font = .regular16
         return $0
     }(UIButton())
+    
+    init(correctOTP: String) {
+        self.correctOTP = correctOTP
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,14 +93,12 @@ class OTPAuthViewController: UIViewController {
     }
     
     func didVerifyOTP(_ otp: String) {
-        // For simplicity, let's assume the correct OTP is "1234"
-        let correctOTP = "1234"
-        
         if otp == correctOTP {
-            print("OTP verification successful")
-            navigateToNextViewController()
-
-            // Perform actions for successful verification, such as navigating to the next screen
+            viewModel.confirmToken {
+                DispatchQueue.main.async { [weak self] in
+                    self?.navigateToNextViewController()
+                }
+            }
         } else {
             print("OTP verification failed")
             showErrorOTPAlert()
